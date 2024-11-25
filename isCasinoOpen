@@ -1,0 +1,22 @@
+let isCasinoOpen = false; // Globaalisti määritelty muuttuja
+
+function updateCasinoStatus() {
+    const now = new Date();
+    const currentDay = now.getDay(); // 0 = sunnuntai, ..., 6 = lauantai
+    const currentHour = now.getHours();
+
+    // Päivitetään kasinon tila: avoinna ma-pe klo 00:00–23:59
+    if (currentDay >= 1 && currentDay <= 5) { // Ma-pe
+        isCasinoOpen = true;
+    } else { // La-su
+        isCasinoOpen = false;
+    }
+
+    // Käytetään muuttujaa käyttöliittymässä
+    const statusElement = document.getElementById("status");
+    if (isCasinoOpen) {
+        statusElement.textContent = "Casino är öppet!";
+    } else {
+        statusElement.textContent = "Casino är stängt för tillfället.";
+    }
+}
