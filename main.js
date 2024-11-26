@@ -66,3 +66,4 @@ document.getElementById("spelinformationForm").addEventListener("submit", functi
     // Näytä painike pelisivulle siirtymistä varten
     document.getElementById("spelinformation-sektion").appendChild(nextButton);
 });
+
