@@ -1,4 +1,4 @@
-let isCasinoOpen = false; // Globaalisti määritelty muuttuja
+let isCasinoOpen = false; 
 
 function updateCasinoStatus() {
     const now = new Date();
