@@ -52,6 +52,9 @@ document.getElementById("spelinformationForm").addEventListener("submit", functi
         return;
     }
 
+    // Spara användarens insats och skapa en spelbalans
+    localStorage.setItem("startingBalance", insatsNummer); // Spara insatsen i localStorage
+
     // Om allt är korrekt, visa meddelande
     alert(`Information sparad: Du är ${ålder} år gammal och spelar med en insats på ${insatsNummer.toFixed(2)} €.`);
 
@@ -66,4 +69,5 @@ document.getElementById("spelinformationForm").addEventListener("submit", functi
     // Näytä painike pelisivulle siirtymistä varten
     document.getElementById("spelinformation-sektion").appendChild(nextButton);
 });
+
 
