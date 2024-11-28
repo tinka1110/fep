@@ -83,38 +83,3 @@ function startGameTimer() {
         }
     }, 1000);
 }
-
-// Navigointivalikon luominen
-function createNavbar() {
-    const menuItems = [
-        { text: "Etusivu", link: "index.html" },
-        { text: "Muistipeli", link: "memory.html" },
-        { text: "Kivi, sakset, paperi", link: "rps.html" },
-        { text: "Kuvagalleria", link: "gallery.html" },
-        { text: "Vaihda väriteema", link: "theme.html" }
-    ];
-
-    const menu = document.getElementById("menu");
-    if (menu) {
-        menuItems.forEach(item => {
-            const li = document.createElement("li");
-            const a = document.createElement("a");
-            a.textContent = item.text;
-            a.href = item.link;
-            li.appendChild(a);
-            menu.appendChild(li);
-        });
-    }
-}
-
-// Hampurilaisvalikon toiminta
-function setupHamburgerMenu() {
-    const hamburger = document.getElementById("hamburger");
-    const menu = document.getElementById("menu");
-
-    if (hamburger && menu) {
-        hamburger.addEventListener("click", () => {
-            menu.classList.toggle("hidden"); // Näytä/piilota menu
-        });
-    }
-}
